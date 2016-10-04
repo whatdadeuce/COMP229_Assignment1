@@ -1,0 +1,15 @@
+﻿body {
+    font-family:"Century Gothic";
+    background: url(../../Assets/BG.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#Main{
+    
+ }
+h1 {
+    font-weight:900;
+    font-variant-caps:small-caps;
+}
