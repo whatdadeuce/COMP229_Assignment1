@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<html lang="en-us">
 <head runat="server">
   
     <title><%= Page.Title %></title>
@@ -14,8 +14,8 @@
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
 </head>
 <body> 
+   <div id="content"></div>    
     <form id="form1" runat="server">
-      
        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,33 +26,31 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a href="Home.aspx"><img src="Assets/logo.png" width="60px"/></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Home.aspx">Home</a></li>
-                        <li><a href="Recipes.aspx">Recipes</a></li>
-                        <li><a href="Add.aspx">Add</a></li>
-                        <li><a href="Search.aspx">Search</a></li>
+                        <%= ActivePage() %>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
-
-    <div id="Main" class="container col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+    <div id="Main" class="container col-lg-10 col-md-10 col-sm-10 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
         <h1><%= Page.Title %></h1>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
           
         </asp:ContentPlaceHolder>
     </div>
-          
+        
     </form>
+     
     <footer runat="server"><% %></footer>
+    
     <script src="Scripts/jquery-2.2.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
    
